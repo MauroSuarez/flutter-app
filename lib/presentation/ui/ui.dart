@@ -1,0 +1,12 @@
+export 'widgets/scaffold/scaffold.dart';
+export 'widgets/dots/dots.dart';
+export 'widgets/slides/slides.dart';
+export 'widgets/button/button.dart';
+export 'widgets/text/text.dart';
+export 'widgets/text_button/text_button.dart';
+export 'widgets/text_form_field/text_form_field.dart';
+export 'widgets/app_bar/app_bar.dart';
+export 'widgets/bottom_bar/bottom_bar.dart';
+export 'widgets/filters/chip_filter.dart';
+export 'widgets/cards/option_card.dart';
+export 'widgets/text_field_search/text_field_search.dart';
