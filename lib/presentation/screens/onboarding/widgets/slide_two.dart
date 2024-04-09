@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/presentation/ui/ui.dart';
+import 'package:flutter_application_1/presentation/widgets/widgets.dart';
 
 import 'slide.dart';
 
-class SlideThree extends StatelessWidget {
-  const SlideThree({super.key});
+class SlideTwo extends StatelessWidget {
+  const SlideTwo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +15,12 @@ class SlideThree extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           const Expanded(
-            child: Slide('assets/slide_three.svg')
+            child: Slide('assets/slide_two.svg')
           ),
           Container(
             alignment: Alignment.centerLeft,
             margin: const EdgeInsets.only( top: 20 ),
-            child: WText.titleExtraLarge('Registrate o inicia sesión'),
+            child: WText.titleExtraLarge('Crea tu cuenta y disfruta'),
           ),
           Container(
             width: 300,

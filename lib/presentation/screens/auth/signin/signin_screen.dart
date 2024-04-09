@@ -3,7 +3,7 @@ import 'package:flutter_application_1/config/config.dart';
 // import 'package:flutter_application_1/presentation/providers/providers.dart';
 // import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter_application_1/presentation/ui/ui.dart';
+import 'package:flutter_application_1/presentation/widgets/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -75,7 +75,7 @@ class _ButtonsSignIn extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            WButton(onPressed: () => context.push('/home'), text: 'Iniciar sesión'),
+            WButton(onPressed: () => context.replace('/home'), text: 'Iniciar sesión'),
             const SizedBox(height: 10),
             WButton.icon(
               onPressed: () {},

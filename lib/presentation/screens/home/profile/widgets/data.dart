@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/config/config.dart';
-import 'package:flutter_application_1/presentation/ui/ui.dart';
+import 'package:flutter_application_1/presentation/widgets/widgets.dart';
 
 class WData extends StatelessWidget {
   const WData({super.key});

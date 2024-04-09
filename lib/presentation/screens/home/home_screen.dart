@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/config/config.dart';
 import 'package:flutter_application_1/presentation/screens/screens.dart';
-import 'package:flutter_application_1/presentation/ui/ui.dart';
+import 'package:flutter_application_1/presentation/widgets/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {

@@ -2,13 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/presentation/providers/providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_application_1/config/config.dart';
-import 'package:flutter_application_1/presentation/ui/ui.dart';
+import 'package:flutter_application_1/presentation/widgets/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'ui/data.dart';
+import 'widgets/data.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:mobx/mobx.dart';
+
+class SimpleCounter {
+  // Step 1
+  final count = Observable(0);
+
+  // Step 2
+  void increment() {
+    runInAction(() => count.value++);
+  }
+}
 
 class ProfileScreen extends ConsumerStatefulWidget { 
-  ProfileScreen({super.key});
+  const ProfileScreen({super.key});
 
   @override
   _Profile createState() => _Profile();
@@ -17,6 +29,7 @@ class ProfileScreen extends ConsumerStatefulWidget {
 class _Profile extends ConsumerState<ProfileScreen> {
   bool _visible = true;
   final singleScrollController = PageController();
+  final SimpleCounter counter = SimpleCounter();
 
   @override
   void initState() {
@@ -55,7 +68,7 @@ class _Profile extends ConsumerState<ProfileScreen> {
           IconButton(
             icon: const Icon(FontAwesomeIcons.ellipsisVertical, size: 20, color: Colors.white),
             onPressed: () => context.push('/edit-profile'),
-          )
+          ),
           // PopupMenuButton<String>(
           //   onSelected: (option) => {},
           //   icon: const Icon(FontAwesomeIcons.ellipsisVertical, size: 20, color: Colors.white),
@@ -69,19 +82,26 @@ class _Profile extends ConsumerState<ProfileScreen> {
           //     }).toList();
           //   },
           // ),
+          // Step 3
+              Observer(
+                  builder: (_) => Text(
+                        '${counter.count.value}',
+                        style: const TextStyle(fontSize: 40),
+                      )),
         ]
       ),
       Stack(
         fit : StackFit.expand,
         alignment: Alignment.center,
-        children: <Widget>[
+        children: <Widget>[ 
           Container(
             height: topHeightPadding + 120,
             decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage('https://ecosistemas.ovacen.com/wp-content/uploads/2018/01/bosque.jpg'), // AssetImage("assets/images/bulb.jpg"),
-                fit: BoxFit.cover,
-              ),
+              color: Colors.black38,
+              // image: DecorationImage(
+              //   image: NetworkImage('https://humanidades.com/wp-content/uploads/2018/08/bosque-1-e1577589211472-800x416.jpg'), // AssetImage("assets/images/bulb.jpg"),
+              //   fit: BoxFit.cover,
+              // ),
             ),
           ),
           Positioned(
@@ -154,7 +174,9 @@ class _Profile extends ConsumerState<ProfileScreen> {
                               const SizedBox(height: 10),
                               WCardOption(
                                 title: 'Cuenta',
-                                onTap: () {},
+                                onTap: () {
+                                  counter.increment();
+                                },
                               ),
                               const SizedBox(height: 10),
                               WCardOption(
@@ -188,6 +210,7 @@ class _Profile extends ConsumerState<ProfileScreen> {
           ),
         ],
       ),
+      
     );
   }
 }

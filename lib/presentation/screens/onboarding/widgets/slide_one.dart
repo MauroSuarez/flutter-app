@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 // import 'package:flutter_application_1/presentation/providers/providers.dart';
-import 'package:flutter_application_1/presentation/ui/ui.dart';
+import 'package:flutter_application_1/presentation/widgets/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'slide.dart';
 

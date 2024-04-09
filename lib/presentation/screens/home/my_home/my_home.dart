@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_application_1/config/config.dart';
-import 'package:flutter_application_1/presentation/ui/ui.dart';
+import 'package:flutter_application_1/presentation/widgets/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyHomeScreen extends StatelessWidget {
@@ -43,13 +43,13 @@ class MyHomeScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      WChipFilter(label: 'Casa',icon: FontAwesomeIcons.house, isSelected: true),
-                      WChipFilter(label: 'Bicicletas',icon: FontAwesomeIcons.bicycle),
-                      WChipFilter(label: 'Cajas',icon: FontAwesomeIcons.cubes, isSelected: true,),
-                      WChipFilter(label: 'autos',icon: FontAwesomeIcons.car),
-                      WChipFilter(label: 'Celulares',icon: FontAwesomeIcons.mobile),
-                      WChipFilter(label: 'Mascotas',icon: FontAwesomeIcons.paw),
-                      WChipFilter(label: 'Juguetes',icon: FontAwesomeIcons.rocket),
+                      WChips(label: 'Casa',icon: FontAwesomeIcons.house, isSelected: true),
+                      WChips(label: 'Bicicletas',icon: FontAwesomeIcons.bicycle),
+                      WChips(label: 'Cajas',icon: FontAwesomeIcons.cubes, isSelected: true,),
+                      WChips(label: 'autos',icon: FontAwesomeIcons.car),
+                      WChips(label: 'Celulares',icon: FontAwesomeIcons.mobile),
+                      WChips(label: 'Mascotas',icon: FontAwesomeIcons.paw),
+                      WChips(label: 'Juguetes',icon: FontAwesomeIcons.rocket),
                     ],
                   ),
                 ),

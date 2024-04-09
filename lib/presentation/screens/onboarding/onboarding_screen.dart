@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/presentation/providers/providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_application_1/presentation/ui/ui.dart';
+import 'package:flutter_application_1/presentation/widgets/widgets.dart';
 import 'package:go_router/go_router.dart';
-import 'ui/slide_one.dart';
-import 'ui/slide_three.dart';
-import 'ui/slide_two.dart';
+import 'widgets/slide_one.dart';
+import 'widgets/slide_three.dart';
+import 'widgets/slide_two.dart';
 
 class OnBoardingScreen extends ConsumerWidget {
   OnBoardingScreen({super.key});

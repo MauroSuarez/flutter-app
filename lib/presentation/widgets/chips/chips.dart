@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/config/config.dart';
-import 'package:flutter_application_1/presentation/ui/ui.dart';
+import 'package:flutter_application_1/presentation/widgets/widgets.dart';
 
-class WChipFilter extends StatelessWidget {
-  const WChipFilter({
+class WChips extends StatelessWidget {
+  const WChips({
     required this.icon,
     required this.label,
     this.isSelected = false,
